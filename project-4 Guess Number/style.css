@@ -96,3 +96,18 @@ p {
   font-size: 16px;
   text-align: center;
 }
+#newGame{
+    background-color: #2f0430;
+    cursor: pointer;
+  color: #f6fd35;
+  width: 200px;
+  height: 41px;
+  border-radius: 10px;
+  font-size: 20px;
+  border-style: none;
+  display: flex;                /* keep flex for inner text centering */
+  justify-content: center;      /* center text horizontally */
+  align-items: center;          /* center text vertically */
+  
+  margin: -17px auto;               /* center the button itself horizontally */
+}
