@@ -10,14 +10,24 @@ function generateRandomColors(){
    }
    return color;
 }
-console.log(generateRandomColors());
+
 //selecting all the dom elements
 const body= document.querySelector("body");
 const start = document.querySelector("#start");
 const stop = document.querySelector("#stop");
 
 //adding event listener to start buttons and stop button
+let intervalId;
 start.addEventListener("click",function(){
-    body.style.backgroundColor=generateRandomColors();
+
+    clearInterval(intervalId); //clearing any previous interval to avoid multiple intervals
+    intervalId=setInterval(function(){
+        body.style.backgroundColor=generateRandomColors();
+    },1000)
+    
 });
+
+stop.addEventListener("click",function(){
+    clearInterval(intervalId);
+})
 
